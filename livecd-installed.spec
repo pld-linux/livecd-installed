@@ -8,8 +8,7 @@ Group:		Base
 Source0:	http://ep09.pld-linux.org/~havner/livecd-%{version}.tar.bz2
 # Source0-md5:	f0bc5023d278c3c39dcdbca9e9539c78
 PreReq:		rc-scripts
-Requires(post,preun):	/sbin/chkconfig
-Requires:	dml
+Requires:	livecd-common
 Obsoletes:	livecd
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,14 +32,6 @@ install rc.live-installed $RPM_BUILD_ROOT/etc/rc.d/rc.live
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post
-/sbin/chkconfig --add %{name}
-
-%preun
-if [ "$1" = "0" ]; then
-	/sbin/chkconfig --del %{name}
-fi
 
 %files
 %defattr(644,root,root,755)

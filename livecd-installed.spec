@@ -4,9 +4,11 @@ Name:		livecd-installed
 Version:	1.0
 Release:	1
 License:	GPL
-Group:		-
+Group:		Base
 Source0:	http://ep09.pld-linux.org/~havner/livecd-%{version}.tar.bz2
 # Source0-md5:	f0bc5023d278c3c39dcdbca9e9539c78
+PreReq:		rc-scripts
+Requires(post,preun):	/sbin/chkconfig
 Requires:	dml
 Obsoletes:	livecd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,12 +24,10 @@ Skrypty dla PLD LiveCD
 %prep
 %setup -q -n livecd
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
 install -d $RPM_BUILD_ROOT%{_initrddir}
+
 install rc.live-installed $RPM_BUILD_ROOT/etc/rc.d/rc.live
 
 %clean

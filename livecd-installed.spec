@@ -41,8 +41,6 @@ if [ "$1" = "0" ]; then
 	/sbin/chkconfig --del %{name}
 fi
 
-%postun
-
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) /etc/rc.d/rc.live

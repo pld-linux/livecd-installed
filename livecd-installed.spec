@@ -35,4 +35,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) /etc/rc.d/rc.live
+%attr(754,root,root) /etc/rc.d/rc.live

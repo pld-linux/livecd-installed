@@ -1,5 +1,5 @@
 Summary:	PLD LiveCD scripts for installed LiveCD
-Summary(pl):	Skrypty PLD LiveCD dla zainstalowanego LiveCd
+Summary(pl.UTF-8):   Skrypty PLD LiveCD dla zainstalowanego LiveCd
 Name:		livecd-installed
 Version:	1.0
 Release:	1
@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Scripts for PLD LiveCD:
 - init script
 
-%description -l pl
+%description -l pl.UTF-8
 Skrypty dla PLD LiveCD
 - skrypt init
 

@@ -1,5 +1,5 @@
 Summary:	PLD LiveCD scripts for installed LiveCD
-Summary(pl.UTF-8):   Skrypty PLD LiveCD dla zainstalowanego LiveCd
+Summary(pl.UTF-8):	Skrypty PLD LiveCD dla zainstalowanego LiveCd
 Name:		livecd-installed
 Version:	1.0
 Release:	1

@@ -26,7 +26,7 @@ Skrypty dla PLD LiveCD
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_initrddir}
+install -d $RPM_BUILD_ROOT/etc/rc.d/init.d
 
 install rc.live-installed $RPM_BUILD_ROOT/etc/rc.d/rc.live
 

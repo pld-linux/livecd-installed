@@ -1,12 +1,12 @@
 Summary:	PLD LiveCD scripts for installed LiveCD
 Summary(pl.UTF-8):	Skrypty PLD LiveCD dla zainstalowanego LiveCd
 Name:		livecd-installed
-Version:	1.0
+Version:	1.91
 Release:	1
 License:	GPL
 Group:		Base
 Source0:	http://ep09.pld-linux.org/~havner/livecd-%{version}.tar.bz2
-# Source0-md5:	f0bc5023d278c3c39dcdbca9e9539c78
+# Source0-md5:	a5fff13c0dda53b1669715dd03f52bfd
 PreReq:		rc-scripts
 Requires:	livecd-common
 Obsoletes:	livecd
@@ -22,13 +22,13 @@ Skrypty dla PLD LiveCD
 - skrypt init
 
 %prep
-%setup -q -n livecd
+%setup -q -n livecd-1.91
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/rc.d/init.d
 
-install rc.live-installed $RPM_BUILD_ROOT/etc/rc.d/rc.live
+install rc.live $RPM_BUILD_ROOT/etc/rc.d/rc.live
 
 %clean
 rm -rf $RPM_BUILD_ROOT
